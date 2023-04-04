@@ -2,11 +2,11 @@
 
 if (number > 5 && number < 8)
 {
-    Console.WriteLine("выходной");
+    Console.WriteLine("Да");
 }
 else if (number >= 1 && number <= 5)
 {
-    Console.WriteLine("Будний");
+    Console.WriteLine("Нет");
 }
 else
 {
