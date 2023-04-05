@@ -1,14 +1,8 @@
 ﻿int number = int.Parse(Console.ReadLine());
 
-if (number > 5 && number < 8)
+int n;
+
+for (n = 1; n <= number; n++)
 {
-    Console.WriteLine("Да");
-}
-else if (number >= 1 && number <= 5)
-{
-    Console.WriteLine("Нет");
-}
-else
-{
-    Console.WriteLine("Нет такого дня недели!");
+    Console.Write(Math.Pow(n, 3) + " ");
 }

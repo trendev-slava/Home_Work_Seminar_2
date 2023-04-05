@@ -1,34 +1,29 @@
-﻿
-//Функция для возведения 10 в необходимую степень
-int Stepen(int step)
+﻿double[] a = { 0, 0, 0 };
+double[] b = { 0, 0, 0 };
+
+double[] InputDotCoordinate()
 {
-    int i;
-    int res = 1;
-    for (i = 1; i <= step; i++)
-    {
-        res = 10 * res;
-    }
-    return res;
+    
 }
 
-int number = int.Parse(Console.ReadLine());
-if (number < 100)
-{
-    Console.WriteLine("третьей цифры нет");
-}
-else
-{
-    int i = 10;
-    int step = -2;
+Console.WriteLine("first dot coordinate");
 
-    //Определяю количество знаков в числе и необходимую степень
-    while (number / i != 0)
-    {
-        i = i * 10;
-        step++;
-    }
-    //Нахожу третий знак в числе
-    int res = ((number % i) % (i / 100)) / Stepen(step);
+Console.Write("x: ");
+a[0] = Convert.ToDouble(Console.ReadLine());
+Console.Write("y: ");
+a[1] = Convert.ToDouble(Console.ReadLine());
+Console.Write("z: ");
+a[2] = Convert.ToDouble(Console.ReadLine());
 
-    Console.WriteLine(res);
-}
+Console.WriteLine("second dot coordinate");
+
+Console.Write("x: ");
+b[0] = Convert.ToDouble(Console.ReadLine());
+Console.Write("y: ");
+b[1] = Convert.ToDouble(Console.ReadLine());
+Console.Write("z: ");
+b[2] = Convert.ToDouble(Console.ReadLine());
+
+double distance = Math.Sqrt((Math.Pow((b[0] - a[0]), 2) + Math.Pow((b[1] - a[1]), 2) + Math.Pow((b[2] - a[2]), 2)));
+
+Console.WriteLine("distance = " + (string.Format("{0:F2}", distance)));
