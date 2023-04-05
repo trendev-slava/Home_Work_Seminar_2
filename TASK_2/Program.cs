@@ -1,28 +1,19 @@
 ﻿double[] a = { 0, 0, 0 };
 double[] b = { 0, 0, 0 };
 
-double[] InputDotCoordinate()
+void FillingArray(double[] name)
 {
-    
+    int i;
+    for (i = 0; i < name.Length; i++)
+    {
+        name[i] = Convert.ToInt32(Console.ReadLine());
+    }
 }
 
-Console.WriteLine("first dot coordinate");
-
-Console.Write("x: ");
-a[0] = Convert.ToDouble(Console.ReadLine());
-Console.Write("y: ");
-a[1] = Convert.ToDouble(Console.ReadLine());
-Console.Write("z: ");
-a[2] = Convert.ToDouble(Console.ReadLine());
-
-Console.WriteLine("second dot coordinate");
-
-Console.Write("x: ");
-b[0] = Convert.ToDouble(Console.ReadLine());
-Console.Write("y: ");
-b[1] = Convert.ToDouble(Console.ReadLine());
-Console.Write("z: ");
-b[2] = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("first coordinate x,y,z");
+FillingArray(a);
+Console.WriteLine("second coordinate x,y,z");
+FillingArray(b);
 
 double distance = Math.Sqrt((Math.Pow((b[0] - a[0]), 2) + Math.Pow((b[1] - a[1]), 2) + Math.Pow((b[2] - a[2]), 2)));
 
