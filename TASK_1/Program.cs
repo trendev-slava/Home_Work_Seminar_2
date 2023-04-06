@@ -1,19 +1,22 @@
-﻿void Palindrom(string array)
+﻿Console.WriteLine("Введите пятизначное число для проверки");
+
+int number = int.Parse(Console.ReadLine());
+
+if(number < 0)
 {
-    int res = 1;
-    int i;
-    for (i = 0; i <= (array.Length / 2); i++)
-    {
-        if (array[i] != array[array.Length - i - 1])
-        {
-            Console.WriteLine("no");
-            res = 0;
-            break;
-        }
-    }
-    if (res == 1) Console.WriteLine("yes");
+number = number * -1;
 }
 
-Console.WriteLine("Input number: ");
-string number = Console.ReadLine();
-Palindrom(number);
+if (number > 9999 && number < 100000)
+{
+
+    int a = number / 10000 % 10;
+    int b = number / 1000 % 10;
+    int c = number / 10 % 10;
+    int d = number % 10;
+    if (a == d && b==c) Console.WriteLine("палиндром");
+    else Console.WriteLine("не палиндром");
+
+}
+else Console.WriteLine("Введите пятизначное число!");
+
